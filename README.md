@@ -56,9 +56,9 @@ Performance là một chủ để lớn, nhưng nó không phải luôn là mộ
 
 ### Làm thế nào để sử dụng?
 
-Đối với mỗi quy tắc, bạn sẽ có một đoạn giải thích *tại sao* về quy tắc đó là quan trọng và *làm thế nào* bạn có thể sửa nó. Để biết thêm thông tin chi tiết, bạn nên tìm đênns link mà sẽ được chỉ bởi các công cụ 🛠, 📖 các bài viết or 📹 các media để có thể hoàn thành checklist.
+Đối với mỗi quy tắc, bạn sẽ có một đoạn giải thích *tại sao* về quy tắc đó là quan trọng và *làm thế nào* bạn có thể sửa nó. Để biết thêm thông tin chi tiết, bạn nên tìm đến link mà sẽ được chỉ bởi các công cụ 🛠, 📖 các bài viết or 📹 các media để có thể hoàn thành checklist.
 
-Tất cả các mục trong **Front-End Performance Checklist** là những yếu tố cần thiết để are essentials để đạt được điểm số về performance cao nhất nhưng bạn sẽ tìm thấy một chỉ số để giúp bạn ưu tiên một số quy tắc khác. Có 3 mức độ ưu tiên: 
+Tất cả các mục trong **Front-End Performance Checklist** là những yếu tố cần thiết để đạt được điểm số về performance cao nhất nhưng bạn sẽ tìm thấy một chỉ số để giúp bạn ưu tiên một số quy tắc khác. Có 3 mức độ ưu tiên: 
 
 * ![Low][low] nghĩa là mục có ưu tiên **thấp**.
 * ![Medium][medium] nghĩa là mục có ưu tiên **trung bình**. Bạn không nên tránh giải quyết mục này.
@@ -66,7 +66,7 @@ Tất cả các mục trong **Front-End Performance Checklist** là những yế
 
 ### Các công cụ cho performance
 
-Danh sách các công cụ bạn có thể sử dụng để test hoặc hiển thị website của bạn hoặc ứng dụng:
+Danh sách các công cụ bạn có thể sử dụng để test hoặc theo dõi website của bạn hoặc ứng dụng:
 
  * 🛠 [WebPagetest - Website Performance and Optimization Test](https://www.webpagetest.org/)
  * 🛠 ☆ [Dareboost: Website Speed Test and Website Analysis](https://www.dareboost.com/) (use the coupon WPCDD20 for -20%)
@@ -107,13 +107,13 @@ Danh sách các công cụ bạn có thể sử dụng để test hoặc hiển 
 
 ![html]
 
-- [ ] **Minified HTML:** ![medium] HTML code được minify, các comment, các khoảng trắng và các dòng mới được loại bỏ khỏi các file production  and new lines are removed from production files.
+- [ ] **Minified HTML:** ![medium] HTML code được minify, các comment, các khoảng trắng và các dòng mới được loại bỏ khỏi các file production.
 
     *Tại sao:*
     > Loại bỏ tất cả các khoảng trắng, các comment và xuống dòng không cần thiết sẽ giảm kích thước HTML của bạn và tăng tốc độ thời gian load trang của bạn và chắc chắn làm giảm bớt việc tải xuống cho người dùng của bạn.
 
     *Cách làm:*
-    > Hầu hết các framework đều có các plugin để tối giản hoá các trang web. Bạn có thể sử dụng một bunch của NPM module mà có thể thực hiện job đó một các tự động.
+    > Hầu hết các framework đều có các plugin để tối giản hoá các trang web. Bạn có thể sử dụng một bunch của NPM module mà có thể thực hiện công việc đó một các tự động.
 
     * 🛠 [HTML minifier | Minify Code](http://minifycode.com/html-minifier/)
     * 🛠 [Online HTML Compressor](http://refresh-sf.com)
@@ -147,7 +147,7 @@ Danh sách các công cụ bạn có thể sử dụng để test hoặc hiển 
     > Thuộc tính type là không cần thiết trong HTML 5 ngụ ý text/css và text/javascript là mặc định. Code không sử dụng nên được loại bỏ khi không được sử dụng bởi website hoặc ứng dụng của bạn, chúng thêm vào làm nặng các trang của bạn.
 
     *Cách làm:*
-    > ⁃ Đảm bảo rằng tất cả các thẻ `<link>` and `<script>` của bạn không chứa bất kỳ thuộc tính type nào.
+    > ⁃ Đảm bảo rằng tất cả các thẻ `<link>` và `<script>` của bạn không chứa bất kỳ thuộc tính type nào.
 
     * 📖 [The Script Tag | CSS-Tricks](https://css-tricks.com/the-script-tag/)
    
@@ -166,7 +166,7 @@ Danh sách các công cụ bạn có thể sử dụng để test hoặc hiển 
     ```
 
     *Tại sao:*
-    > Có các thẻ CSS trước bất kỳ thẻ Javascript nào sẽ tốt hơn Having your CSS tags before any JavaScript enables better, tải xuống song song giúp tăng tốc độ về thời gian hiển thị của trình duyệt.
+    > Có các thẻ CSS trước bất kỳ thẻ Javascript nào sẽ tốt hơn, tải xuống song song giúp tăng tốc độ về thời gian hiển thị của trình duyệt.
 
     *Cách làm:*
     > ⁃ Đảm bảo rằng `<link>`  và `<style>` trong `<head>` là luôn luôn ở trước `<script>`.
@@ -237,7 +237,7 @@ Danh sách các công cụ bạn có thể sử dụng để test hoặc hiển 
 - [ ] **Độ dài của các class CSS:** ![low] Độ dài của các class của bạn có thể có một ảnh hưởng (nhẹ) lên các file HTML và CSS của bạn.
 
     *Tại sao:*
-    > Even performance impacts can be disputable, taking a decision on a naming strategy regarding your project can have a substantial impact on the maintainability of your stylesheets. Nếu bạn đang sử dụng BEM, trong một vài class bạn có thể kết thúc với các class có nhiều ký tự hơn cần thiết. Việc chọn tên và namespace không ngoan luôn là điều quan trọng.
+    > Ngay cả các tác động hiệu suất có thể bị tranh chấp, đưa ra quyết định về việc đặt tên liên quan đến dự án của bạn có thể có tác động đáng kể đến khả năng bảo trì của stylesheets của bạn. Nếu bạn đang sử dụng BEM, trong một vài class bạn có thể kết thúc với các class có nhiều ký tự hơn cần thiết. Việc chọn tên và namespace không ngoan luôn là điều quan trọng.
 
     *Cách làm:*
     > Đặt một giới hạn về số lượng ký tự có thể hấp dẫn cho một số người, nhưng đảm bảo rằng bạn không làm vỡ website của bạn trong các thành phần có thể giúp làm giảm số lượng các class (và các khai báo) và kích thước của các class.
